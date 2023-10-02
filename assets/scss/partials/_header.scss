@@ -1,0 +1,41 @@
+.header {
+    width: 100%;
+    background: $darkMode-primary;
+    background: linear-gradient(180deg, $darkMode-primary 0%, $darkMode-secondary 100%);
+    border-bottom: 2px solid $green-primary;
+    text-align: center;
+
+    &__content {
+        width: $container-width-xs;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media screen and (min-width: $screen-width-sm) {
+            width: $container-width-sm;
+        }
+        @media screen and (min-width: $screen-width-md) {
+            width: $container-width-md;
+        }
+        @media screen and (min-width: $screen-width-lg) {
+            width: $container-width-lg;
+        }
+        @media screen and (min-width: $screen-width-xl) {
+            width: $container-width-xl;
+        }
+        @media screen and (min-width: $screen-width-xxl) {
+            width: $container-width-xxl;
+        }
+    }
+
+    /*&__main {
+        
+    }
+
+    &__logo {
+        
+    }*/
+}
