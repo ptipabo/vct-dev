@@ -1,41 +1,197 @@
-.header {
-    width: 100%;
-    background: $darkMode-primary;
-    background: linear-gradient(180deg, $darkMode-primary 0%, $darkMode-secondary 100%);
-    border-bottom: 2px solid $green-primary;
-    text-align: center;
+body{
+    .header {
+        width: 100%;
+        background: $darkMode-primary;
+        background: linear-gradient(180deg, $darkMode-primary 0%, $darkMode-secondary 100%);
+        border-bottom: 3px solid $green-primary;
+        text-align: center;
+        padding: 1.3rem 0 .9rem;
+        box-shadow: 0px 10px 20px $darkMode-shadowColor;
 
-    &__content {
-        width: $container-width-xs;
-        display: flex;
-        flex-flow: row;
-        justify-content: space-between;
-        align-items: center;
-        margin-left: auto;
-        margin-right: auto;
+        &__content {
+            width: $container-width-xs;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
 
-        @media screen and (min-width: $screen-width-sm) {
-            width: $container-width-sm;
+            @media screen and (min-width: $screen-width-sm) {
+                width: $container-width-sm;
+            }
+            @media screen and (min-width: $screen-width-md) {
+                width: $container-width-md;
+            }
+            @media screen and (min-width: $screen-width-lg) {
+                width: $container-width-lg;
+            }
+            @media screen and (min-width: $screen-width-xl) {
+                width: $container-width-xl;
+            }
+            @media screen and (min-width: $screen-width-xxl) {
+                width: $container-width-xxl;
+            }
         }
-        @media screen and (min-width: $screen-width-md) {
-            width: $container-width-md;
+
+        &__main {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
         }
-        @media screen and (min-width: $screen-width-lg) {
-            width: $container-width-lg;
+
+        &__logo {
+            margin-right: 4rem;
         }
-        @media screen and (min-width: $screen-width-xl) {
-            width: $container-width-xl;
+
+        &__menu {
+            color: $darkMode-textIdle;
+
+            &-list {
+                list-style-type: none;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            &-item {
+                margin-right: 2.3rem;
+                font-size: 1.2rem;
+
+                &-link {
+                    color: $darkMode-textIdle;
+                    text-decoration: none;
+                    font-weight: bold;
+                    transition: .7s;
+
+                    &.currentPage {
+                        color: $green-primary;
+                    }
+
+                    &:hover {
+                        transition: .7s;
+                        color: $darkMode-text;
+                    }
+                }
+            }
         }
-        @media screen and (min-width: $screen-width-xxl) {
-            width: $container-width-xxl;
+
+        &__options {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-end;
+            align-items: center;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        &__darkMode {
+            &-toggle {
+                display: none;
+
+                &:checked {
+                    &+.header__darkMode-toggleLabel {
+                        border: 3px solid $darkMode-textIdle;
+
+                        &:after {
+                            left: 50%;
+                            background: $darkMode-textIdle;
+                        }
+
+                        &:hover {
+                            transition: .2s;
+                            border: 3px solid $darkMode-text;
+            
+                            &:after {
+                                background: $darkMode-text;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-toggleLabel {
+                border: 3px solid $lightMode-textIdle;
+                border-radius: 16px;
+                cursor: pointer;
+                display: block;
+                height: 20px;
+                outline: 0;
+                padding: 2px;
+                position: relative;
+                transition: all .2s ease-in-out;
+                width: 44px;
+
+                &:after {
+                    content: "";
+                    display: block;
+                    height: 100%;
+                    position: relative;
+                    width: 50%;
+                    border-radius: 16px;
+                    left: 0;
+                    transition: all .2s ease-in-out;
+                    background: $lightMode-textIdle;
+                }
+
+                &:hover {
+                    transition: .2s;
+                    border: 3px solid $lightMode-text;
+
+                    &:after {
+                        background: $lightMode-text;
+                    }
+                }
+            }
+        }
+
+        &__option {
+            margin-left: 1.5rem;
+            color: $darkMode-textIdle;
+            font-size: .9rem;
+            text-decoration: none;
+            transition: .7s;
+
+            &-darkMode {
+                margin-left: .8rem;
+            }
+
+            &:hover {
+                transition: .7s;
+                color: $darkMode-text;
+            }
         }
     }
 
-    /*&__main {
-        
+    &.lightMode {
+        .header {
+            background: $lightMode-primary;
+            background: linear-gradient(180deg, $lightMode-primary 0%, $lightMode-secondary 100%);
+            box-shadow: 0px 10px 20px $lightMode-shadowColor;
+    
+            &__menu {
+                color: $lightMode-textIdle;
+    
+                &-item {
+                    &-link {
+                        color: $lightMode-textIdle;
+    
+                        &:hover {
+                            color: $lightMode-text;
+                        }
+                    }
+                }
+            }
+    
+            &__option {
+                color: $lightMode-textIdle;
+    
+                &:hover {
+                    color: $lightMode-text;
+                }
+            }
+        }
     }
-
-    &__logo {
-        
-    }*/
 }

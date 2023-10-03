@@ -7,3 +7,14 @@
 
 // any CSS you import will output into a single css file (app.css in this case)
 import '../scss/app.scss';
+
+var darkModeToggle = document.querySelector('#darkMode');
+var container = document.body;
+
+darkModeToggle.addEventListener('click', () => {
+    if(!darkModeToggle.checked){
+        container.classList.add("lightMode");
+    }else{
+        container.classList.remove("lightMode");
+    }
+});

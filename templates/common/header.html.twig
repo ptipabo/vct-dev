@@ -2,22 +2,30 @@
     <div class="header__content">
         <div class="header__main">
             <a href="/">
-                <img class="header__logo" src="{{ asset('/bundles/demoimage/images/mainLogo.svg') }}" />
+                <img class="header__logo" src="{{ asset('/build/images/vct_mainLogo_white.svg') }}" width="100" />
             </a>
             <nav class="header__menu">
-                <ul class="header__menuList">
-                    <li class="header__menuItem"><a href="/portfolio">Portfolio</a></li>
-                    <li class="header__menuItem"><a href="/cv">CV</a></li>
-                    <li class="header__menuItem"><a href="/univers">Mon Univers</a></li>
-                    <li class="header__menuItem"><a href="/contact">Contact</a></li>
+                <ul class="header__menu-list">
+                    <li class="header__menu-item">
+                        <a class="header__menu-item-link" href="/portfolio">Portfolio</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-item-link" href="/cv">CV</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-item-link" href="/univers">Mon Univers</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-item-link" href="/contact">Contact</a>
+                    </li>
                 </ul>
             </nav>
         </div>
         <div class="header__options">
-            <input type="checkbox" id="darkMode" class="header__darkMode-toggle" />
+            <input type="checkbox" id="darkMode" class="header__darkMode-toggle" checked />
             <label for="darkMode" class="header__darkMode-toggleLabel"></label>
-            <p class="header__option">Mode Sombre</p>
-            <a href="https://en.vct-dev.test">English Version</a>
+            <p class="header__option header__option-darkMode">Mode Sombre</p>
+            <a class="header__option" href="https://en.vct-dev.test">English Version</a>
         </div>
     </div>
 </header>
