@@ -1,0 +1,37 @@
+.adminToolBar {
+    background-color: $black;
+    color: $darkMode-text;
+    padding: 1rem 0;
+    padding-left: 2rem;
+
+    &__dropdown {
+        &-label {
+            cursor: pointer;
+        }
+
+        &-list {
+            display: none;
+            list-style-type: none;
+            position: absolute;
+            padding: 1rem;
+            padding-bottom: .6rem;
+            margin-top: 0.5rem;
+            background-color: $darkMode-secondary;
+            border-radius: 0.4rem;
+            border: 1px solid $darkMode-text;
+        }
+
+        &-item {
+            margin-bottom: .4rem;
+
+            &Link {
+                color: $darkMode-textIdle;
+                text-decoration: none;
+
+                &:hover {
+                    color: $darkMode-text;
+                }
+            }
+        }
+    }
+}

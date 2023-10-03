@@ -9,11 +9,18 @@
         {% endblock %}
 
         {% block javascripts %}
+            <script src="https://kit.fontawesome.com/affc9e4c15.js" crossorigin="anonymous"></script>
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
     <body>
+        {% include './common/adminToolBar.html.twig' %}
         {% include './common/header.html.twig' %}
-        {% block body %}{% endblock %}
+        <main class="mainContainer">
+            <div class="mainContent">
+                {% block body %}{% endblock %}
+            </div>
+        </main>
+        {% include './common/footer.html.twig' %}
     </body>
 </html>

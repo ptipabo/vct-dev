@@ -1,0 +1,47 @@
+body{
+    .mainContent {
+        width: 95%;
+        margin: 0 auto;
+        padding-top: 2rem;
+
+        @media screen and (min-width: $screen-width-sm) {
+            width: $container-width-sm;
+        }
+        @media screen and (min-width: $screen-width-md) {
+            width: $container-width-md;
+        }
+        @media screen and (min-width: $screen-width-lg) {
+            width: $container-width-lg;
+        }
+        @media screen and (min-width: $screen-width-xl) {
+            width: $container-width-xl;
+        }
+        @media screen and (min-width: $screen-width-xxl) {
+            width: $container-width-xxl;
+        }
+
+        &__mainTitle{
+            line-height: 3rem;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+
+            &-reduced {
+                color: $darkMode-textIdle;
+                font-size: 1.8rem;
+            }
+
+            &-highLighted {
+                color: $green-primary;
+                font-size: 3rem;
+            }
+        }
+    }
+
+    &.lightMode {
+        &__mainTitle{
+            &-reduced {
+                color: $lightMode-textIdle;
+            }
+        }
+    }
+}

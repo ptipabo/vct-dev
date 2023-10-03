@@ -1,0 +1,49 @@
+body{
+    .footer {
+        width: 100%;
+        background: $darkMode-primary;
+        background: linear-gradient(180deg, $darkMode-primary 0%, $darkMode-secondary 100%);
+        border-top: 3px solid $green-primary;
+        text-align: center;
+        padding: 1.3rem 0 .9rem;
+        box-shadow: 0px -10px 20px $darkMode-shadowColor;
+        transition: .7s;
+        color: $darkMode-text;
+        font-weight: bold;
+
+        &__content {
+            width: $container-width-xs;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+
+            @media screen and (min-width: $screen-width-sm) {
+                width: $container-width-sm;
+            }
+            @media screen and (min-width: $screen-width-md) {
+                width: $container-width-md;
+            }
+            @media screen and (min-width: $screen-width-lg) {
+                width: $container-width-lg;
+            }
+            @media screen and (min-width: $screen-width-xl) {
+                width: $container-width-xl;
+            }
+            @media screen and (min-width: $screen-width-xxl) {
+                width: $container-width-xxl;
+            }
+        }
+    }
+
+    &.lightMode {
+        .footer {
+            background: $lightMode-primary;
+            background: linear-gradient(180deg, $lightMode-primary 0%, $lightMode-secondary 100%);
+            box-shadow: 0px -10px 20px $lightMode-shadowColor;
+            color: $lightMode-text;
+        }
+    }
+}

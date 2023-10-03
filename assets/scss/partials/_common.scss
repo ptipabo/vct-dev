@@ -8,10 +8,30 @@ html {
     padding: 0;
 }
 
+.faIcon {
+    font-family: 'Font Awesome 6 Free';
+    color: $darkMode-text;
+}
+
 body {
     background-color: $darkMode-primary;
+    transition: .7s;
+
+    .mainContainer {
+        color: $darkMode-text;
+        text-align: center;
+    
+        &__mainTitle {
+            font-size: 2rem;
+        }
+    }
 
     &.lightMode {
         background-color: $lightMode-primary;
+        transition: .7s;
+
+        .mainContainer {
+            color: $lightMode-text;
+        }
     }
 }

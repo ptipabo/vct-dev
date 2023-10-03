@@ -7,6 +7,7 @@ body{
         text-align: center;
         padding: 1.3rem 0 .9rem;
         box-shadow: 0px 10px 20px $darkMode-shadowColor;
+        transition: .7s;
 
         &__content {
             width: $container-width-xs;
@@ -43,6 +44,14 @@ body{
 
         &__logo {
             margin-right: 4rem;
+
+            &-darkMode {
+                display: block;
+            }
+
+            &-lightMode {
+                display: none;
+            }
         }
 
         &__menu {
@@ -182,6 +191,16 @@ body{
                             color: $lightMode-text;
                         }
                     }
+                }
+            }
+
+            &__logo {
+                &-darkMode {
+                    display: none;
+                }
+    
+                &-lightMode {
+                    display: block;
                 }
             }
     
