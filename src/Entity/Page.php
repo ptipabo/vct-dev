@@ -2,12 +2,14 @@
 
 namespace App\Entity;
 
-use App\Repository\PageRepository;
+use App\Model\TimestampedInterface;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\PageRepository;
+
 
 #[ORM\Entity(repositoryClass: PageRepository::class)]
-class Page
+class Page implements TimestampedInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
