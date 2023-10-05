@@ -9,8 +9,11 @@ html {
 }
 
 .faIcon {
-    font-family: 'Font Awesome 6 Free';
-    color: $darkMode-text;
+    color: $darkMode-textIdle;
+
+    &:hover {
+        color: $darkMode-text;
+    }
 }
 
 body {
@@ -34,4 +37,8 @@ body {
             color: $lightMode-text;
         }
     }
+}
+
+.hideElement {
+    display: none;
 }
